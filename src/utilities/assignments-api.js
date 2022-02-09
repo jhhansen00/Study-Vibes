@@ -14,3 +14,7 @@ export function getById(id) {
     return sendRequest(`${BASE_URL}/${id}`);
 }
 
+export function deleteAssignment(id) {
+    console.log(id)
+    return sendRequest(`${BASE_URL}/delete/${id}`, 'DELETE');
+}

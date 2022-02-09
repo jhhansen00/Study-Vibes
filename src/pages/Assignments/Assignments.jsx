@@ -6,13 +6,7 @@ import AssignmentsList from '../../components/AssignmentsList/AssignmentsList';
 
 export default function Assignments() {
     const [assignments, setAssignments] = useState([])
-    const [selectedAssignment, setSelectedAssignment] = useState({})
-
-    function handleSelection(assignmentId) {
-        const selectedAssignment = assignments.filter(a => a._id === assignmentId)
-        setSelectedAssignment(selectedAssignment);
-    }
-
+    console.log(assignments, "yo")
     useEffect(function() {
         async function getAssignments() {
             const tasks = await assignmentsAPI.getAll();
@@ -23,7 +17,8 @@ export default function Assignments() {
 
     return (
         <main>
-            <AssignmentsList assignments={assignments} handleSelection={handleSelection}/>
+            <AssignmentsList assignments={assignments} setAssignments={setAssignments} />
+            
         </main>
     )
 }
