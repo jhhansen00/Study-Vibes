@@ -1,8 +1,11 @@
+const assignment = require('../../models/assignment');
 const Assignment = require('../../models/assignment');
-const { default: Assignments } = require('../../src/pages/Assignments/Assignments');
+
 
 module.exports = {
     create,
+    index,
+    show,
 };
 
 async function create(req, res) {
@@ -15,6 +18,11 @@ async function create(req, res) {
 async function index(req, res) {
     const assignments = await Assignment.find({});
     res.json(assignments);
+}
+
+async function show(req, res) {
+    const assignment = await Assignment.findById(req.params.id);
+    res.json(assignment);
 }
 // make a delete
 // make a detail

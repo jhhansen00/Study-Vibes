@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
 import NewAssignment from '../NewAssignment/NewAssignment';
+import Assignments from '../Assignments/Assignments';
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -17,7 +18,7 @@ function App() {
         <NavBar setUser={setUser} user={user}/>
           <Routes>
             <Route path="/assignments/new" element={<NewAssignment />}/>
-            <Route path="/orders" />
+            <Route path="/assignments" element={<Assignments />}/>
           </Routes>
         </>
         :
