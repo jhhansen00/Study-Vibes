@@ -5,7 +5,6 @@ const Assignment = require('../../models/assignment');
 module.exports = {
     create,
     index,
-    show,
     deleteAssignment,
 };
 
@@ -21,17 +20,10 @@ async function index(req, res) {
     res.json(assignments);
 }
 
-async function show(req, res) {
-    const assignment = await Assignment.findById(req.params.id);
-    res.json(assignment);
-}
 
 async function deleteAssignment(req, res) {
     const deletedAssignment = await Assignment.findById(req.params.id);
     deletedAssignment.remove();
-    console.log(deletedAssignment);
     res.json(deletedAssignment);
 }
-// make a delete
-// make a detail
 // make a update

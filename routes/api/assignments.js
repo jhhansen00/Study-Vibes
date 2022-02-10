@@ -6,8 +6,6 @@ router.post('/', assignmentCtrl.create);
 
 router.get('/', assignmentCtrl.index);
 
-router.get('/:id', assignmentCtrl.show);
-
 router.delete('/delete/:id', assignmentCtrl.deleteAssignment);
 
 module.exports = router;

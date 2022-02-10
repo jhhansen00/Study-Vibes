@@ -1,13 +1,14 @@
 
 import AssignmentListItem from '../AssignmentListItem/AssignmentListItem';
 
-export default function AssignmentsList({assignments, setAssignments }) {
+export default function AssignmentsList({assignments, setAssignments, toggleStale}) {
     const items = assignments.map(item =>
         <AssignmentListItem 
         key={item._id}
         assignments={assignments}
         setAssignments={setAssignments}
         assignment={item}
+        toggleStale={toggleStale}
         />);
     return (    
         <main>

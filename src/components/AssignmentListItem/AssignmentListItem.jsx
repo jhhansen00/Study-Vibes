@@ -2,17 +2,18 @@ import { Link } from 'react-router-dom';
 import './AssignmentListItem.css'
 import * as assignmentsApi from '../../utilities/assignments-api';
 
-export default function AssignmentListItem({assignment, assignments, setAssignments }) {
+export default function AssignmentListItem({assignment, assignments, setAssignments, toggleStale }) {
 
     async function handleDelete(evt) {
         evt.preventDefault();
-        const deletedAssignment = assignmentsApi.deleteAssignment(assignment._id);
-        let assignmentsCopy = [...assignments];
-        let newAssignmentList = assignmentsCopy.map(function(a) {
-            if (a._id !== deletedAssignment._id)
-            return a; 
-        })
-        setAssignments(newAssignmentList);
+        const deletedAssignment = await assignmentsApi.deleteAssignment(assignment._id);
+        toggleStale();
+        // let assignmentsCopy = [...assignments];
+        // let newAssignmentList = assignmentsCopy.map(function(a) {
+        //     if (a._id !== deletedAssignment._id)
+        //     return a; 
+        // })
+        // setAssignments(newAssignmentList);
     }
 
     return (
