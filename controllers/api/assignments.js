@@ -11,6 +11,7 @@ module.exports = {
 async function create(req, res) {
     req.body.user = req.user._id
     req.body.completed = false;
+    req.body.timeStudied = 0;
     const assignment = await Assignment.create(req.body);
     res.json(assignment)
 }

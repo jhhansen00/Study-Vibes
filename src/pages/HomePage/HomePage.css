@@ -1,0 +1,8 @@
+.Home {
+    color: white;
+    font-size: 350px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-weight: 900;
+}

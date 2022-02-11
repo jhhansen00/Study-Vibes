@@ -10,6 +10,10 @@ const assignmentSchema = new Schema({
         type: Date,
         required: true,
     },
+    timeStudied: {
+        type: Number,
+        required: true,
+    },
     completed: {
         type: Boolean,
         default: false,

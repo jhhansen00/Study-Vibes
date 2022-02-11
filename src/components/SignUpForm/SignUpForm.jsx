@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { useNavigate } from "react-router-dom";
 import { signUp } from "../../utilities/users-service";
 
 class SignUpForm extends Component {
@@ -24,7 +25,6 @@ class SignUpForm extends Component {
       const formData = {...this.state};
       delete formData.error;
       delete formData.confirm;
-
       const user = await signUp(formData);
       this.props.setUser(user);
     } catch {

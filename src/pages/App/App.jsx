@@ -6,6 +6,7 @@ import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
 import NewAssignment from '../NewAssignment/NewAssignment';
 import Assignments from '../Assignments/Assignments';
+import HomePage from '../HomePage/HomePage';
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/assignments/new" element={<NewAssignment />}/>
             <Route path="/assignments" element={<Assignments />}/>
+            <Route path="/home" element={<HomePage />}/>
           </Routes>
         </>
         :

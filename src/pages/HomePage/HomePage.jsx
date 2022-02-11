@@ -1,21 +1,27 @@
-import { useState } from 'react';
-import { getUser } from '../../utilities/users-service';
-import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from '../../components/NavBar/NavBar';
-import AuthPage from '../AuthPage/AuthPage';
+import Girl from '../../components/Video/lofi-lofigirl.mp4';
+import './HomePage.css'
 
 export default function HomePage() {
-    const [user, setUser] = useState(getUser());
+    
   
     return (
-        <main className='App'>
-            <Router>
-                <NavBar user={user} setUser={setUser} />
-                {/* <Routes>
-                    <Route path="/login"></Route>
-                </Routes> */}
-            </Router>
+        <main>
+            <video autoPlay loop muted
+            style={{
+                position: 'absolute',
+                width: '100%',
+                left: '50%',
+                top: '50%',
+                height: '100%',
+                objectFit: 'cover',
+                transform: 'translate(-50%, -50%)',
+                zIndex: '-1'
+            }}
+            >
+                <source src={Girl} type='video/mp4' />
+            </video>
+            <div className='Home'>Study</div>
+            <div className='Home'>Vibes</div>
         </main>
     );
 }
