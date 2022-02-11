@@ -1,3 +1,7 @@
-.NavBar {
+.navBar {
     background-color: burlywood;
+}
+
+#welcome {
+    color: white;
 }

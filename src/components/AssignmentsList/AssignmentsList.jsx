@@ -1,4 +1,4 @@
-
+import './AssignmentsList.css'
 import AssignmentListItem from '../AssignmentListItem/AssignmentListItem';
 
 export default function AssignmentsList({assignments, setAssignments, toggleStale}) {
@@ -11,7 +11,7 @@ export default function AssignmentsList({assignments, setAssignments, toggleStal
         toggleStale={toggleStale}
         />);
     return (    
-        <main>
+        <main className='assignmentsList'>
             {items}
         </main>
     )

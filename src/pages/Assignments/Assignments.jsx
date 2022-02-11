@@ -1,7 +1,9 @@
 import * as assignmentsAPI from '../../utilities/assignments-api';
 import { useState, useEffect } from 'react';
 import AssignmentsList from '../../components/AssignmentsList/AssignmentsList';
-
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 
 export default function Assignments() {
@@ -20,9 +22,15 @@ export default function Assignments() {
     }
 
     return (
-        <main>
-            <AssignmentsList assignments={assignments} setAssignments={setAssignments} toggleStale={toggleStale} />
+        <Container className='assignments'>
+            <Row>
+                <Col></Col>
+                <Col>
+                    <AssignmentsList assignments={assignments} setAssignments={setAssignments} toggleStale={toggleStale} />
+                </Col>
+                <Col></Col>
+            </Row>
             
-        </main>
+        </Container>
     )
 }
