@@ -29,9 +29,9 @@ export default function NewAssignment() {
 
     return (
         <form id="new-assignment" onSubmit={handleSubmit}>
-            <div>Assignment Name:<input type="text" name="assignmentName" onChange={handleChange} value={form.assignmentName} /></div>
-            <div>Due Date:<input type="datetime-local" name="dueDate" onChange={handleChange} value={form.dueDate} /></div>
-            <button type="submit">Submit</button>
+            <div>Assignment Name: <input type="text" name="assignmentName" onChange={handleChange} value={form.assignmentName} /></div>
+            <div>Due Date: <input type="datetime-local" name="dueDate" onChange={handleChange} value={form.dueDate} /></div>
+            <button id='submit' type="submit">Submit</button>
         </form>
     )
 }

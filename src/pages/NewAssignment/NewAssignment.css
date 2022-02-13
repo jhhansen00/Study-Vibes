@@ -1,3 +1,11 @@
 #new-assignment {
-    padding: 40px
+    padding: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+#submit {
+    margin-bottom: 9px;
 }

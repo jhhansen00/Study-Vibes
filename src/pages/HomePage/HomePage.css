@@ -5,4 +5,5 @@
     align-content: center;
     justify-content: center;
     font-weight: 900;
+    user-select: none;
 }

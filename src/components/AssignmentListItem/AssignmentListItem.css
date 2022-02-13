@@ -7,3 +7,7 @@
     font-weight: 500;
 }
 
+#delete {
+    display: flex;
+    justify-content: center;
+}
