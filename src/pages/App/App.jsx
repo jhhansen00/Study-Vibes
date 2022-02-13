@@ -17,12 +17,12 @@ function App() {
       {
         user ?
         <>
-        <NavBars setUser={setUser} user={user}/>
-          <Routes>
-            <Route path="/assignments/new" element={<NewAssignment />}/>
-            <Route path="/assignments" element={<Assignments />}/>
-            <Route path="/home" element={<HomePage />}/>
-          </Routes>
+          <NavBars setUser={setUser} user={user}/>
+            <Routes>
+              <Route path="/assignments/new" element={<NewAssignment />}/>
+              <Route path="/assignments" element={<Assignments />}/>
+              <Route path="/home" element={<HomePage />}/>
+            </Routes>
         </>
         :
         <AuthPage setUser={setUser} />

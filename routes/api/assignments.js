@@ -8,4 +8,6 @@ router.get('/', assignmentCtrl.index);
 
 router.delete('/delete/:id', assignmentCtrl.deleteAssignment);
 
+router.put('/toggle/:id', assignmentCtrl.toggleComplete);
+
 module.exports = router;

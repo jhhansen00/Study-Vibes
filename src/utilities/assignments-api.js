@@ -15,6 +15,9 @@ export function getById(id) {
 }
 
 export function deleteAssignment(id) {
-    console.log(id)
     return sendRequest(`${BASE_URL}/delete/${id}`, 'DELETE');
+}
+
+export function toggleComplete(id) {
+    return sendRequest(`${BASE_URL}/toggle/${id}`, 'PUT');
 }

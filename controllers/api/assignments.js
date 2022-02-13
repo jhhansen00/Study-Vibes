@@ -1,4 +1,3 @@
-const assignment = require('../../models/assignment');
 const Assignment = require('../../models/assignment');
 
 
@@ -6,6 +5,7 @@ module.exports = {
     create,
     index,
     deleteAssignment,
+    toggleComplete,
 };
 
 async function create(req, res) {
@@ -27,4 +27,10 @@ async function deleteAssignment(req, res) {
     deletedAssignment.remove();
     res.json(deletedAssignment);
 }
-// make a update
+
+async function toggleComplete(req, res) {
+    let toggledAssignment = await Assignment.findById(req.params.id);
+    toggledAssignment.completed = !toggledAssignment.completed;
+    toggledAssignment.save();
+    res.json(toggledAssignment);
+}
