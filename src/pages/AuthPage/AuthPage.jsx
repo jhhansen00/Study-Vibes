@@ -4,9 +4,10 @@ import LoginForm from "../../components/LoginForm/LoginForm";
 function AuthPage({ setUser }) {
   return (
     <main>
-      <h1>Sign-In</h1>
+      <h1>Welcome to Study Vibes!</h1>
+      <h2>Sign-In</h2>
       <SignUpForm setUser={setUser} />
-      <h1>Log-In</h1>
+      <h2>Login</h2>
       <LoginForm setUser={setUser} />
     </main>
   )
