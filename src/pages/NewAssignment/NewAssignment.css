@@ -8,4 +8,6 @@
 
 #submit {
     margin-bottom: 9px;
+    background-color: rgb(3, 180, 3);
+    border-radius: 15%;
 }

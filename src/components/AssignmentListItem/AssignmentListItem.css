@@ -5,9 +5,16 @@
     max-width: 50vh;
     min-height: 20vh;
     font-weight: 500;
+    border-radius: 5%;
 }
 
 #delete {
     display: flex;
     justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#delete-button {
+    background-color: red;
 }

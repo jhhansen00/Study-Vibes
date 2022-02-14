@@ -22,8 +22,8 @@ export default function AssignmentListItem({assignment, toggleStale }) {
             <p>Task Name: {assignment.assignmentName}</p>
             <p>Due: {new Date(assignment.dueDate).toLocaleString()}</p>
             <p>Completed? {assignment.completed.toString().toUpperCase()}</p>
-            <button onClick={handleClick}>Toggle Completed</button>
-            <form id="delete" onSubmit={handleDelete} type='submit'><button>Delete</button></form>
+            <button id="togglecompleted" onClick={handleClick}>Toggle Completed</button>
+            <form id="delete" onSubmit={handleDelete} type='submit'><button id="delete-button">Delete</button></form>
         </Container>
     )
 }
